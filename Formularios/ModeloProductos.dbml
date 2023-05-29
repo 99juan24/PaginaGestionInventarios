@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="ModeloProductosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Productos" Member="Productos">
+    <Type Name="Productos">
+      <Column Name="codigo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="valorunitario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.actualizarProductos" Method="actualizarProductos">
+    <Parameter Name="codigo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="valorunitario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.buscarProductos" Method="buscarProductos">
+    <Parameter Name="codigo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="buscarProductosResult">
+      <Column Name="codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="valorunitario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.eliminarProductos" Method="eliminarProductos">
+    <Parameter Name="codigo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.insertarProductos" Method="insertarProductos">
+    <Parameter Name="codigo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cantidad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="valorunitario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
